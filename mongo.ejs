@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mongo.css">
+</head>
+<body>
+    <h3><%= title%></h3>
+    <form action="/add" >
+    <button type="submit" class="add">Add a title</button>
+</form>
+    <table cellpadding="8" border="1" cellspacing="0">
+        <thead>
+            <th>Title</th>
+            <th>Snippet</th>
+            <th>Body</th>
+        </thead>
+        <tbody>
+            <%if(datas.length>0){%>
+                <%datas.forEach(function(data){%>
+                    <tr>
+                <td><%= data.title%></td>
+                <td><%= data.snippet%></td>
+                <td><%= data.body%></td>
+            </tr>
+                <%})}%>
+        </tbody>
+    </table>
+    <div class="buttons">
+        <a href="/delete">
+            <button class="delete">Delete</button></a>
+       <a href="/update"><button class="update">Update</button></a>
+    </div>
+</body>
+</html>

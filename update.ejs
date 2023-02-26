@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5><%= title%></h5>
+    <form action="/updating" method="post">
+        <input type="text" name="titletoUpdate" placeholder="Enter the title to update"><br>
+        <input type="text" name="New_title" placeholder="Enter the new title"><br>
+        <input type="text" name="New_snippet" placeholder="Enter the new snippet"><br>
+        <input type="text" name="New_body" placeholder="Enter the new body"><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
